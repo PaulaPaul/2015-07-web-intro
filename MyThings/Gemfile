@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 # add carrierwave for handling image uploads for my things
 gem 'carrierwave'
 
