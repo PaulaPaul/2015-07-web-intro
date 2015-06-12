@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @thing.name %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @thing.color %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= image_tag(@thing.photo, :width => 300) if @thing.photo.present? %>
+</p>
+
+<%= link_to 'Edit', edit_thing_path(@thing) %> |
+<%= link_to 'Back', things_path %>
