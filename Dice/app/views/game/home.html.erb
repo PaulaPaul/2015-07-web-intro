@@ -1,0 +1,27 @@
+<h1>Dice Game!</h1>
+<p>Welcome to my dice game.</p>
+<p>I've tossed two die, below. Do you think you can beat my score?</p>
+<p>The winner is the player with the highest total score, after adding the two die together.</p>
+<p>Good Luck!</p>
+<table>
+<tr>
+  <td><%= image_tag(@computer_die1, size: "80x80") %></td> <td><%= image_tag(@computer_die2, size: "80x80") %></td>
+</tr>
+<tr>
+  <td><%= image_tag(@player_die1, size: "80x80") %></td> <td><%= image_tag(@player_die2, size: "80x80") %></td>
+</tr>
+<tr>
+<td colspan=2>
+  <%= form_tag("/game/home", method: "post") do %>
+    <%= hidden_field_tag(:computer_die1, value = @computer_die1) %>
+    <%= hidden_field_tag(:computer_die2, value = @computer_die2) %>
+    <%= submit_tag("Rollem!") %>
+  <% end %>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+  <%= @message %>
+</td>
+</tr>
+</table>
